@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-1{fill:#4267b2}
+        </style>
+    </defs>
+    <g id="ic_facebook" transform="translate(-204 -2511)">
+        <circle id="Ellipse_61" data-name="Ellipse 61" class="cls-1" cx="12" cy="12" r="12" transform="translate(204 2511)"/>
+        <g id="Group_7946" data-name="Group 7946" transform="translate(208.333 2514)">
+            <circle id="Ellipse_62" data-name="Ellipse 62" cx="6" cy="6" r="6" transform="translate(1.667 2)" style="fill:#fff"/>
+            <g id="Icon_Bold_Social_Facebook" data-name="Icon / Bold / Social / Facebook" transform="translate(.667 1)">
+                <path id="Container" style="fill:none" d="M0 0h14v14H0z"/>
+                <path id="Icon_Bold_Social_Facebook-2" data-name="Icon / Bold / Social / Facebook" class="cls-1" d="M13.162 6.581a6.581 6.581 0 1 0-7.61 6.5v-4.6h-1.67v-1.9h1.671v-1.45a2.322 2.322 0 0 1 2.486-2.56 10.124 10.124 0 0 1 1.473.129v1.62h-.83A.951.951 0 0 0 7.61 5.347v1.234h1.825l-.292 1.9H7.61v4.6a6.583 6.583 0 0 0 5.553-6.5" transform="translate(.419)"/>
+            </g>
+        </g>
+    </g>
+</svg>

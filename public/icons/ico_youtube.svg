@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <g transform="translate(-100 -2511.415)">
+        <circle data-name="Ellipse 57" cx="12" cy="12" r="12" transform="translate(100 2511.415)" style="fill:#c40f1d"/>
+        <g data-name="Icon / Bold / Social / Youtube">
+            <path style="fill:none" d="M0 0h14v14H0z" transform="translate(105 2516.415)"/>
+            <path data-name="Icon / Bold / Social / Youtube" d="M6.684 9.324h-.443a32.839 32.839 0 0 1-4.789-.276 1.666 1.666 0 0 1-1.175-1.18A17.061 17.061 0 0 1 0 4.684v-.193a16.1 16.1 0 0 1 .277-3.036A1.666 1.666 0 0 1 1.452.278 35.081 35.081 0 0 1 6.416 0h.448a35.077 35.077 0 0 1 4.965.278A1.666 1.666 0 0 1 13 1.455a16.133 16.133 0 0 1 .276 3.063v.242A16.231 16.231 0 0 1 13 7.868a1.665 1.665 0 0 1-1.174 1.178 38.1 38.1 0 0 1-5.142.278zM5.249 2.637v4.05l3.572-2.025-3.572-2.025z" transform="translate(105.142 2518.535)" style="fill:#fff"/>
+        </g>
+    </g>
+</svg>
