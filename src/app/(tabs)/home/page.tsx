@@ -1,4 +1,5 @@
 import HomeAppBar from './HomeAppBar'
+import Jumbotron from './Jumbotron'
 
 const HomePage = () => {
   return (
@@ -7,7 +8,7 @@ const HomePage = () => {
       <HomeAppBar />
 
       {/* 대형 슬라이드 (메인 배너) */}
-      {/* <Jumbotron /> */}
+      <Jumbotron />
     </>
   )
 }

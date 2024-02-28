@@ -27,7 +27,7 @@
     "react-youtube": "^10.1.0",
     "reactjs-popup": "^2.0.6",
     "sass": "^1.71.1",
-    "swiper": "^11.0.6",
+    "swiper": "^11.0.7",
     "swr": "^2.2.5"
   },
   "devDependencies": {
