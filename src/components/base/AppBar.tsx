@@ -1,13 +1,12 @@
 'use client'
 
-import { ReactNode } from 'react'
 import useScrollDetector from '@/hooks/useScrollDetector'
 
 type AppBarProps = {
-  left1?: ReactNode
+  left1?: React.ReactNode
   left2?: string
-  right1?: ReactNode
-  right2?: ReactNode
+  right1?: React.ReactNode
+  right2?: React.ReactNode
   flexibleHeight?: boolean
 }
 
