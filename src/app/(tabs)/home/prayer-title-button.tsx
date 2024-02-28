@@ -1,4 +1,4 @@
-import Button, { OPACITY_ONLY } from '@/components/base/Button'
+import Button, { OPACITY_ONLY } from '@/components/base/button'
 import { ROUTE_OFFICIAL_PRAYER_TITLE } from '@/constants/routes'
 
 /**

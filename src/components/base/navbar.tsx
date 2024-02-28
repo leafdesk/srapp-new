@@ -1,8 +1,8 @@
 'use client'
 
-import useScrollDetector from '@/hooks/useScrollDetector'
+import useScrollDetector from '@/hooks/use-scroll-detector'
 
-type AppBarProps = {
+type NavbarProps = {
   left1?: React.ReactNode
   left2?: string
   right1?: React.ReactNode
@@ -13,13 +13,13 @@ type AppBarProps = {
 /**
  * 앱 상단 바.
  */
-const AppBar = ({
+const Navbar = ({
   left1,
   left2,
   right1,
   right2,
   flexibleHeight = false,
-}: AppBarProps) => {
+}: NavbarProps) => {
   const { isSmall } = useScrollDetector()
 
   const height = flexibleHeight && isSmall ? 'h-10' : 'h-16'
@@ -51,4 +51,4 @@ const AppBar = ({
   )
 }
 
-export default AppBar
+export default Navbar

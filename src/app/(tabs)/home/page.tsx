@@ -1,12 +1,12 @@
-import HomeAppBar from './HomeAppBar'
-import Jumbotron from './Jumbotron'
-import PrayerTitleButton from './PrayerTitleButton'
+import HomeNavbar from './home-navbar'
+import Jumbotron from './jumbotron'
+import PrayerTitleButton from './prayer-title-button'
 
 const HomePage = () => {
   return (
     <>
       {/* 앱 상단 바 */}
-      <HomeAppBar />
+      <HomeNavbar />
 
       {/* 대형 슬라이드 (메인 배너) */}
       <Jumbotron />

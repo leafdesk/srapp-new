@@ -1,12 +1,12 @@
-import AppBar from '@/components/base/AppBar'
-import { CiLogo } from '@/components/base/Icon'
+import Navbar from '@/components/base/navbar'
+import { CiLogo } from '@/components/base/icon'
 
 /**
  * 홈 페이지 앱 바.
  */
-const HomeAppBar = () => {
+const HomeNavbar = () => {
   return (
-    <AppBar
+    <Navbar
       left1={<CiLogo />}
       // right1={
       //   <Button onClick={() => window.alert('준비 중입니다.')}>
@@ -22,4 +22,4 @@ const HomeAppBar = () => {
   )
 }
 
-export default HomeAppBar
+export default HomeNavbar
