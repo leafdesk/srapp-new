@@ -1,12 +1,12 @@
-import Navbar from '@/components/base/navbar'
+import Header from '@/components/base/header'
 import { CiLogo } from '@/components/base/icon'
 
 /**
- * 홈 페이지 앱 바.
+ * 홈 헤더.
  */
-const HomeNavbar = () => {
+const HomeHeader = () => {
   return (
-    <Navbar
+    <Header
       left1={<CiLogo />}
       // right1={
       //   <Button onClick={() => window.alert('준비 중입니다.')}>
@@ -22,4 +22,4 @@ const HomeNavbar = () => {
   )
 }
 
-export default HomeNavbar
+export default HomeHeader

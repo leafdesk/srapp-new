@@ -1,4 +1,4 @@
-import HomeNavbar from './home-navbar'
+import HomeHeader from './home-header'
 import Jumbotron from './jumbotron'
 import PrayerTitleButton from './prayer-title-button'
 import QuickMenu from './quick-menu'
@@ -7,8 +7,8 @@ import Today from './today'
 const HomePage = () => {
   return (
     <>
-      {/* 앱 상단 바 */}
-      <HomeNavbar />
+      {/* 홈 페이지 헤더 */}
+      <HomeHeader />
 
       {/* 대형 슬라이드 (메인 배너) */}
       <Jumbotron />

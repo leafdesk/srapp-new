@@ -11,9 +11,9 @@ type NavbarProps = {
 }
 
 /**
- * 앱 상단 바.
+ * 페이지 헤더. (top app bar, title bar, action bar, header bar)
  */
-const Navbar = ({
+const Header = ({
   left1,
   left2,
   right1,
@@ -51,4 +51,4 @@ const Navbar = ({
   )
 }
 
-export default Navbar
+export default Header
