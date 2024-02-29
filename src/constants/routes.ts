@@ -1,7 +1,12 @@
 /**
- * 루트. (메인 홈)
+ * 루트 페이지.
  */
 export const ROUTE_ROOT = '/'
+
+/**
+ * 홈 페이지.
+ */
+export const ROUTE_HOME = '/home'
 
 /**
  * 주보.
