@@ -40,8 +40,6 @@ const PageLayout = ({ children }: { children: React.ReactNode }) => {
       isBibleRoute ||
       isHymnRoute
 
-    console.log(isBibleRoute, isHymnRoute, shouldShowNavbar)
-
     setIsNavbarVisible(shouldShowNavbar)
   }, [pathname])
 

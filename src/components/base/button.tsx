@@ -12,7 +12,7 @@ export const OPACITY_ONLY = 1
 type ButtonProps = {
   href?: string
   onClick?: () => void // onClick 이벤트 핸들러 타입 정의
-  children: React.ReactNode // React 컴포넌트의 자식 요소들
+  children?: React.ReactNode // React 컴포넌트의 자식 요소들
   className?: string
   option?: number
 }
