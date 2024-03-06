@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: 'Noto Sans KR', Apple SD Gothic Neo, AppleGothicNeoSD,
+    Microsoft NeoGothic, Arial, 'Malgun Gothic', '맑은 고딕', Dotum, '돋움',
+    Helvetica, Droid sans, sans-serif !important;
+}
