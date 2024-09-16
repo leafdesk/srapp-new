@@ -1,12 +1,8 @@
-/**
- * TODO: redirect to home page.
- */
+import { redirect } from 'next/navigation'
+
 const RootPage = () => {
-  return (
-    <>
-      <span>RootPage</span>
-    </>
-  )
+  redirect('/home')
+  return null
 }
 
 export default RootPage
