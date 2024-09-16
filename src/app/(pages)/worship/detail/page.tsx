@@ -5,11 +5,12 @@ import { BackIcon } from '@/components/base/icon'
 import TopBar from '@/components/base/top-bar'
 import { ROUTE_SERMON } from '@/constants/routes'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import useSWR from 'swr'
 import WeeklyOrder from './weekly-order'
 import WeeklySummary from './weekly-summary'
 import YouTube from 'react-youtube'
+import Spinner from '@/components/base/spinner'
 
 const WorshipDetailPage = () => {
   const router = useRouter()
@@ -57,92 +58,100 @@ const WorshipDetailPage = () => {
   }, [router])
 
   return (
-    <div className="sub_container sermon_detail">
-      <TopBar
-        left={
-          <Button href={`${ROUTE_SERMON}?kind=${kind}`}>
-            <BackIcon />
-          </Button>
-        }
-        center={
-          <h3 className="text-base font-medium text-[#222222]">
-            {ser_kind[kind]}
-          </h3>
-        }
-        right={<div className="h-12 w-12" />}
-      />
-
-      <div className="movie_wrap">
-        {isMute && (
-          <div
-            onClick={() => {
-              youtubeTarget.unMute()
-              youtubeTarget.setVolume(100)
-              setIsMute(false)
-            }}
-            style={{
-              position: 'absolute',
-              zIndex: '10',
-              padding: '15px',
-            }}
-          >
-            <img
-              style={{ width: '50%' }}
-              src="/images/btn_mute.png"
-              alt="음소거"
-            />
-          </div>
-        )}
-        <YouTube
-          videoId={vid || ''}
-          opts={opts}
-          // containerClassName="iframe_wrap"
-          onReady={onPlayerReady}
+    <Suspense
+      fallback={
+        <div className="w-full flex justify-center pb-10">
+          <Spinner size={8} />
+        </div>
+      }
+    >
+      <div className="sub_container sermon_detail">
+        <TopBar
+          left={
+            <Button href={`${ROUTE_SERMON}?kind=${kind}`}>
+              <BackIcon />
+            </Button>
+          }
+          center={
+            <h3 className="text-base font-medium text-[#222222]">
+              {ser_kind[kind]}
+            </h3>
+          }
+          right={<div className="h-12 w-12" />}
         />
-        <div className="info">
-          {/* <Share
+
+        <div className="movie_wrap">
+          {isMute && (
+            <div
+              onClick={() => {
+                youtubeTarget.unMute()
+                youtubeTarget.setVolume(100)
+                setIsMute(false)
+              }}
+              style={{
+                position: 'absolute',
+                zIndex: '10',
+                padding: '15px',
+              }}
+            >
+              <img
+                style={{ width: '50%' }}
+                src="/images/btn_mute.png"
+                alt="음소거"
+              />
+            </div>
+          )}
+          <YouTube
+            videoId={vid || ''}
+            opts={opts}
+            // containerClassName="iframe_wrap"
+            onReady={onPlayerReady}
+          />
+          <div className="info">
+            {/* <Share
             title={router.query.vtit}
             thum="/images/kakao_def_new.jpg"
             vid={router.query.vid}
           /> */}
-          <div className="tit">
-            <a href="pages#">{vtit || ''}</a>
+            <div className="tit">
+              <a href="pages#">{vtit || ''}</a>
+            </div>
+            <div className="date">{vdate || ''}</div>
           </div>
-          <div className="date">{vdate || ''}</div>
         </div>
-      </div>
 
-      {(kind == 'def' || kind == 'sun') && data?.weekly[0] && (
-        <div className="section">
-          <ul className="tab_area">
-            <li
-              onClick={() => {
-                if (tabKind != 'ord') {
-                  setTabKind('ord')
-                }
-              }}
-              className={tabKind == 'ord' ? 'on' : ''}
-            >
-              예배순서
-            </li>
-            <li
-              onClick={() => {
-                if (tabKind != 'ser') {
-                  setTabKind('ser')
-                }
-              }}
-              className={tabKind == 'ser' ? 'on' : ''}
-            >
-              설교요지
-            </li>
-          </ul>
-          <div className="tab_con">
-            {tabKind == 'ord' && <WeeklyOrder data={data?.weekly[0]} />}
-            {tabKind == 'ser' && <WeeklySummary data={data?.weekly[0]} />}
+        {(kind == 'def' || kind == 'sun') && data?.weekly[0] && (
+          <div className="section">
+            <ul className="tab_area">
+              <li
+                onClick={() => {
+                  if (tabKind != 'ord') {
+                    setTabKind('ord')
+                  }
+                }}
+                className={tabKind == 'ord' ? 'on' : ''}
+              >
+                예배순서
+              </li>
+              <li
+                onClick={() => {
+                  if (tabKind != 'ser') {
+                    setTabKind('ser')
+                  }
+                }}
+                className={tabKind == 'ser' ? 'on' : ''}
+              >
+                설교요지
+              </li>
+            </ul>
+            <div className="tab_con">
+              {tabKind == 'ord' && <WeeklyOrder data={data?.weekly[0]} />}
+              {tabKind == 'ser' && <WeeklySummary data={data?.weekly[0]} />}
+            </div>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+    </Suspense>
   )
 }
 
