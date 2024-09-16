@@ -2,7 +2,7 @@
 'use client'
 
 import { useRouter, useSearchParams } from 'next/navigation'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import TopBar from '@/components/base/top-bar'
 import Spinner from '@/components/base/spinner'
 import { SermonType, useFetchVideos } from './use-fetch-videos'
@@ -13,7 +13,7 @@ function isSermonType(value: any): value is SermonType {
   return value === 'def' || value === 'sun' || value === 'wed'
 }
 
-const WorshipPage = () => {
+const WorshipContent = () => {
   const router = useRouter()
   const searchParams = useSearchParams()
   const [sermon, setSermon] = useState<SermonType>('def')
@@ -73,6 +73,15 @@ const WorshipPage = () => {
         </>
       )}
     </div>
+  )
+}
+
+// Suspense로 WorshipContent 감싸기
+const WorshipPage = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <WorshipContent />
+    </Suspense>
   )
 }
 
