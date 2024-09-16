@@ -180,7 +180,7 @@ const WorshipPage = () => {
           </div>
         ) : (
           <>
-            <div className="section pt0 subborder">
+            <div className="">
               {/* 상단 메인 영상 */}
               <div className="pb-10">
                 {/* <YouTube
@@ -195,7 +195,6 @@ const WorshipPage = () => {
                     )
                     router.push(
                       `${ROUTE_SERMON_DETAIL}?vid=${mainData.videoId}&vtit=${mainData.title}&vdate=${mainData.publishedAt}&kind=${sermon}`,
-                      ROUTE_SERMON_DETAIL,
                     )
                   }}
                 >
@@ -212,7 +211,6 @@ const WorshipPage = () => {
                     onClick={() => {
                       router.push(
                         `${ROUTE_SERMON_DETAIL}?vid=${mainData.videoId}&vtit=${mainData.title}&vdate=${mainData.publishedAt}&kind=${sermon}`,
-                        ROUTE_SERMON_DETAIL,
                       )
                     }}
                   >
@@ -227,8 +225,8 @@ const WorshipPage = () => {
             </div>
 
             {/* 하단 리스트 */}
-            <div className="section subbordert pt15">
-              <ul className="grid gap-8">
+            <div className="px-4">
+              <ul className="grid gap-8 divide-y">
                 {listData.map((doc, i) => {
                   let splitListDate = doc.snippet.publishedAt.split('T')
                   let ListDate = splitListDate[0].split('-')
@@ -247,7 +245,6 @@ const WorshipPage = () => {
                       onClick={() => {
                         router.push(
                           `${ROUTE_SERMON_DETAIL}?vid=${doc.snippet.resourceId.videoId}&vtit=${ListTitle}&vdate=${lDate}&kind=${sermon}`,
-                          ROUTE_SERMON_DETAIL,
                         )
                       }}
                       className=""
