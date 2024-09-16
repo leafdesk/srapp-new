@@ -46,12 +46,12 @@ export const ROUTE_HYMN = '/hymn'
 /**
  * 예배. (설교)
  */
-export const ROUTE_SERMON = '/sermon'
+export const ROUTE_SERMON = '/worship'
 
 /**
  * 예배 (설교) > 상세. [영상 시청 페이지]
  */
-export const ROUTE_SERMON_DETAIL = '/sermon/detail'
+export const ROUTE_SERMON_DETAIL = '/worship/detail'
 
 /**
  * 콘텐츠 > 온(ON) 시리즈. (온라인 콘텐츠)
