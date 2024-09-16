@@ -42,7 +42,7 @@ const WorshipDetailPage = () => {
       controls: 1,
     },
   }
-  const [youtubeTarget, setYoutubeTarget] = useState({})
+  const [youtubeTarget, setYoutubeTarget] = useState<any>(null)
   const [isMute, setIsMute] = useState(false)
   const onPlayerReady = (event: any) => {
     event.target.mute()
