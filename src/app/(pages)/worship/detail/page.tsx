@@ -96,7 +96,7 @@ const WorshipDetailPage = () => {
         <YouTube
           videoId={vid || ''}
           opts={opts}
-          containerClassName="iframe_wrap"
+          // containerClassName="iframe_wrap"
           onReady={onPlayerReady}
         />
         <div className="info">
